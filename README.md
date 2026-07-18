@@ -25,6 +25,25 @@ to manage crowd flow, respond to incidents, and maintain safe, efficient operati
 Both views share a single Gemini-based backend service layer, demonstrating how one
 GenAI architecture can serve multiple stakeholder needs simultaneously.
 
+### Chosen Vertical & Persona
+This solution targets the **Operations & Fan Experience** vertical. The primary personas served are the **Fan** (seeking multilingual navigation, accessibility, and real-time guidance) and the **Stadium Operations Staff** (seeking AI-driven analysis of crowd density for immediate decision-making).
+
+### Approach and Logic
+Our approach uses a singular **LLM logic core (Gemini 2.5 Flash)** to process both qualitative fan interactions and quantitative staff data.
+- **Fan Logic:** The AI dynamically accesses local JSON fixtures (transport schedules, facility locations) and applies a system prompt to deduce the fan's intent, auto-detect their language, and return precise, contextual wayfinding or sustainability advice. 
+- **Staff Logic:** The AI ingests a synthetic stream of deterministic crowd signals (gate densities, wait times) formatted as JSON. It then uses reasoning to cross-reference these metrics against safety thresholds, emitting operational recommendations and plain-text shift summaries that reflect current ground truths.
+
+### How the Solution Works
+1. **Fan Flow:** A user types a message in their native language in the React frontend. The FastAPI backend intercepts it, injects the real-time context (facilities/transport data) into a Gemini prompt, and streams the generated response back via Server-Sent Events (SSE). 
+2. **Staff Flow:** The simulation module continuously generates synthetic crowd density data. When the staff dashboard polls the `/analyze` endpoint, Gemini analyzes the JSON payload and identifies bottleneck patterns, returning actionable directives directly to the UI's Alerts feed.
+3. **Resilience:** Both flows are wrapped in Pydantic validation, `slowapi` rate limiting, and generic error handlers to prevent cascading failures.
+
+### Assumptions Made
+- **Simulated Data:** All crowd density, wait time, and weather data are deterministically simulated via `simulator.py` (no real hardware sensors or external APIs are polled).
+- **Static Context:** Transport schedules and facility locations are static JSON fixtures used as ground truth for the LLM.
+- **Language Auto-Detection:** The solution relies entirely on Gemini's native capability to infer and match the fan's input language, rather than explicit user language selection.
+- **LLM Efficacy:** It is assumed that Gemini responds within acceptable latencies for chat interactions, aided by the backend's in-memory LRU caching of frequent identical queries.
+
 > **Note:** All real-time data is synthetically generated for demonstration purposes.
 > No real stadium sensor data is used or collected.
 
