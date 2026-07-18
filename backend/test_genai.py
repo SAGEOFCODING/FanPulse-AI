@@ -4,7 +4,7 @@ from google import genai
 async def main():
     client = genai.Client(api_key='fake')
     try:
-        response = await client.aio.models.generate_content_stream(model='gemini-1.5-flash', contents='hello')
+        response = await client.aio.models.generate_content_stream(model='gemini-flash-latest', contents='hello')
         print(type(response))
         async for chunk in response:
             print(chunk.text)

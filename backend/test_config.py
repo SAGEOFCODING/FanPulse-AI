@@ -8,7 +8,7 @@ async def main():
         config = types.GenerateContentConfig(
             system_instruction="Hello world"
         )
-        response = await client.aio.models.generate_content_stream(model='gemini-1.5-flash', contents='hello', config=config)
+        response = await client.aio.models.generate_content_stream(model='gemini-flash-latest', contents='hello', config=config)
         async for chunk in response:
             print(chunk.text)
     except Exception as e:

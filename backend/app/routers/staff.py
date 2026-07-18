@@ -169,15 +169,3 @@ async def get_alerts(request: Request) -> dict:
         "data_timestamp": signals["timestamp"],
     }
 
-from app.gemini.client import get_gemini_client
-
-@router.get("/diagnostic-models")
-async def get_diagnostic_models():
-    client = get_gemini_client()
-    try:
-        models = []
-        for m in client.models.list():
-            models.append({"name": m.name})
-        return {"models": models}
-    except Exception as e:
-        return {"error": str(e)}
