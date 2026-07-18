@@ -1,6 +1,6 @@
 # ⚡ FanPulse AI — GenAI Stadium Companion & Operations Copilot
 
-> **FIFA World Cup 2026 | Powered by Google Gemini**
+> **FIFA World Cup 2026 | Powered by Google Gemini & Vercel**
 
 ## Problem Statement
 
