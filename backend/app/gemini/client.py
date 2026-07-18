@@ -35,17 +35,23 @@ SAFETY_SETTINGS: list[types.SafetySetting] = [
     ),
 ]
 
+_client_instance = None
 
 def get_gemini_client() -> genai.Client:
     """Return a configured Gemini client instance.
 
-    The client is created fresh each call (lightweight) to avoid
-    stale connection issues in long-running servers.
+    The client is a singleton to prevent premature garbage collection
+    which closes the async httpx connection pool.
     """
+    global _client_instance
+    if _client_instance is not None:
+        return _client_instance
+
     if settings.gemini_api_key == "not-set":
         logger.warning("GEMINI_API_KEY is not set — AI features will fail")
 
-    return genai.Client(api_key=settings.gemini_api_key)
+    _client_instance = genai.Client(api_key=settings.gemini_api_key)
+    return _client_instance
 
 
 async def generate_text(
