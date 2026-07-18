@@ -8,8 +8,10 @@ import json
 import logging
 from datetime import datetime
 
-from fastapi import APIRouter, Request
+from fastapi import APIRouter, HTTPException, Query, Request
+from pydantic import ValidationError
 
+from app.limiter import limiter
 from app.data.simulator import generate_current_signals, generate_time_series
 from app.gemini.client import generate_text
 from app.gemini.prompts import (
@@ -48,6 +50,7 @@ async def get_crowd_data(request: Request) -> CrowdDataResponse:
 
 
 @router.post("/analyze", response_model=AnalysisResponse)
+@limiter.limit("10/minute")
 async def analyze_crowd(request: Request, body: AnalyzeRequest) -> AnalysisResponse:
     """AI-powered analysis of current crowd conditions.
 
@@ -74,6 +77,7 @@ async def analyze_crowd(request: Request, body: AnalyzeRequest) -> AnalysisRespo
 
 
 @router.post("/summary", response_model=SummaryResponse)
+@limiter.limit("10/minute")
 async def generate_shift_summary(request: Request, body: SummaryRequest) -> SummaryResponse:
     """Generate an AI-written end-of-shift summary report.
 
@@ -101,6 +105,7 @@ async def generate_shift_summary(request: Request, body: SummaryRequest) -> Summ
         shift_duration_minutes=body.shift_duration_minutes,
         data_points_analyzed=len(time_series),
     )
+
 
 
 @router.get("/alerts")

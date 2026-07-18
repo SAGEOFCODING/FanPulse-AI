@@ -12,6 +12,7 @@ from fastapi import APIRouter, Request
 from fastapi.responses import StreamingResponse
 import typing
 
+from app.limiter import limiter
 from app.gemini.cache import prompt_cache
 from app.gemini.client import generate_text, generate_text_stream
 from app.gemini.prompts import build_fan_prompt, get_fan_concierge_system_prompt
@@ -33,6 +34,7 @@ def _load_json(filename: str) -> dict[str, typing.Any]:
 
 
 @router.post("/chat", response_model=ChatResponse)
+@limiter.limit("20/minute")
 async def fan_chat(request: Request, body: ChatRequest) -> ChatResponse:
     """AI concierge chat endpoint (non-streaming fallback).
 
@@ -61,6 +63,7 @@ async def fan_chat(request: Request, body: ChatRequest) -> ChatResponse:
 
 
 @router.post("/chat/stream")
+@limiter.limit("20/minute")
 async def fan_chat_stream(request: Request, body: ChatRequest) -> StreamingResponse:
     """Streaming AI concierge chat via Server-Sent Events.
 

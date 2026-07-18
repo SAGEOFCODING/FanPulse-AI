@@ -8,11 +8,11 @@ import logging
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
-from slowapi.util import get_remote_address
 
 from app.config import settings
+from app.limiter import limiter
 from app.middleware.error_handler import ErrorHandlerMiddleware
 from app.routers import fan, staff
 
@@ -23,8 +23,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Rate limiter — uses client IP for key
-limiter = Limiter(key_func=get_remote_address)
+# Rate limiter imported from app.limiter
 
 # Create FastAPI app
 app = FastAPI(
@@ -79,16 +78,7 @@ async def health_check() -> dict:
     }
 
 
-# Apply rate limits to Gemini-calling endpoints
-@app.middleware("http")
-async def rate_limit_middleware(request: Request, call_next):  # type: ignore[no-untyped-def]
-    """Apply endpoint-specific rate limits.
-
-    Fan chat: 20/minute per IP
-    Staff analyze/summary: 10/minute per IP
-    """
-    response = await call_next(request)
-    return response
+# Dummy middleware removed in favor of endpoint decorators
 
 
 if __name__ == "__main__":
