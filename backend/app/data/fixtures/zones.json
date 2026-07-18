@@ -1,0 +1,88 @@
+{
+  "stadium_name": "MetLife Stadium",
+  "location": "East Rutherford, New Jersey, USA",
+  "capacity": 82500,
+  "zones": [
+    {
+      "id": "zone-north",
+      "name": "North Stand",
+      "sections": ["101", "102", "103", "104", "105"],
+      "gates": ["A", "B"],
+      "level": "Lower",
+      "coordinates": { "x": 0.5, "y": 0.1 }
+    },
+    {
+      "id": "zone-south",
+      "name": "South Stand",
+      "sections": ["201", "202", "203", "204", "205"],
+      "gates": ["E", "F"],
+      "level": "Lower",
+      "coordinates": { "x": 0.5, "y": 0.9 }
+    },
+    {
+      "id": "zone-east",
+      "name": "East Stand",
+      "sections": ["106", "107", "108", "109", "110"],
+      "gates": ["C", "D"],
+      "level": "Lower",
+      "coordinates": { "x": 0.9, "y": 0.5 }
+    },
+    {
+      "id": "zone-west",
+      "name": "West Stand",
+      "sections": ["111", "112", "113", "114", "115"],
+      "gates": ["G", "H"],
+      "level": "Lower",
+      "coordinates": { "x": 0.1, "y": 0.5 }
+    },
+    {
+      "id": "zone-upper-north",
+      "name": "Upper North",
+      "sections": ["301", "302", "303", "304", "305"],
+      "gates": ["A", "B"],
+      "level": "Upper",
+      "coordinates": { "x": 0.5, "y": 0.2 }
+    },
+    {
+      "id": "zone-upper-south",
+      "name": "Upper South",
+      "sections": ["401", "402", "403", "404", "405"],
+      "gates": ["E", "F"],
+      "level": "Upper",
+      "coordinates": { "x": 0.5, "y": 0.8 }
+    },
+    {
+      "id": "zone-upper-east",
+      "name": "Upper East",
+      "sections": ["306", "307", "308", "309", "310"],
+      "gates": ["C", "D"],
+      "level": "Upper",
+      "coordinates": { "x": 0.8, "y": 0.5 }
+    },
+    {
+      "id": "zone-upper-west",
+      "name": "Upper West",
+      "sections": ["311", "312", "313", "314", "315"],
+      "gates": ["G", "H"],
+      "level": "Upper",
+      "coordinates": { "x": 0.2, "y": 0.5 }
+    }
+  ],
+  "gates": [
+    { "id": "A", "name": "Gate A", "location": "North-West", "coordinates": { "x": 0.3, "y": 0.05 }, "capacity": 5000 },
+    { "id": "B", "name": "Gate B", "location": "North-East", "coordinates": { "x": 0.7, "y": 0.05 }, "capacity": 5000 },
+    { "id": "C", "name": "Gate C", "location": "East-North", "coordinates": { "x": 0.95, "y": 0.3 }, "capacity": 5000 },
+    { "id": "D", "name": "Gate D", "location": "East-South", "coordinates": { "x": 0.95, "y": 0.7 }, "capacity": 5000 },
+    { "id": "E", "name": "Gate E", "location": "South-East", "coordinates": { "x": 0.7, "y": 0.95 }, "capacity": 5000 },
+    { "id": "F", "name": "Gate F", "location": "South-West", "coordinates": { "x": 0.3, "y": 0.95 }, "capacity": 5000 },
+    { "id": "G", "name": "Gate G", "location": "West-South", "coordinates": { "x": 0.05, "y": 0.7 }, "capacity": 5000 },
+    { "id": "H", "name": "Gate H", "location": "West-North", "coordinates": { "x": 0.05, "y": 0.3 }, "capacity": 5000 }
+  ],
+  "landmarks": [
+    { "name": "Main Concourse", "near_gates": ["A", "B"], "description": "Central walkway on the north side with food vendors and merchandise shops" },
+    { "name": "Family Zone", "near_gates": ["F"], "description": "Dedicated family-friendly area with kids activities and quieter atmosphere" },
+    { "name": "Fan Festival Plaza", "near_gates": ["C", "D"], "description": "Outdoor gathering area with big screens and live entertainment" },
+    { "name": "VIP Lounge", "near_gates": ["G"], "description": "Premium hospitality area — VIP ticket holders only" },
+    { "name": "Media Center", "near_gates": ["H"], "description": "Press and broadcast facilities" }
+  ]
+}

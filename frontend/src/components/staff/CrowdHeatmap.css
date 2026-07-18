@@ -1,0 +1,44 @@
+/* CrowdHeatmap.css */
+
+.heatmap-container {
+  position: relative;
+}
+
+.heatmap-svg {
+  width: 100%;
+  max-height: 420px;
+}
+
+.stadium-outline {
+  transition: stroke var(--transition-normal);
+}
+
+.gate-group {
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.gate-group:hover {
+  filter: brightness(1.2);
+}
+
+.gate-group:hover .gate-glow {
+  opacity: 0.3;
+}
+
+.gate-circle {
+  transition: all var(--transition-normal);
+}
+
+.gate-label {
+  pointer-events: none;
+}
+
+.heatmap-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}

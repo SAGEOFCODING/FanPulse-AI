@@ -1,0 +1,64 @@
+{
+  "faqs": [
+    {
+      "question": "What time do the gates open?",
+      "answer": "Gates open 3 hours before kickoff. We recommend arriving at least 90 minutes early to avoid queues and enjoy the pre-match atmosphere at the Fan Festival Plaza."
+    },
+    {
+      "question": "Can I bring a bag into the stadium?",
+      "answer": "Yes, but bags must comply with the clear bag policy. Bags must be clear plastic, vinyl, or PVC and not exceed 12\" x 6\" x 12\". Small clutch purses (4.5\" x 6.5\") are also allowed. No backpacks, large purses, or opaque bags."
+    },
+    {
+      "question": "Is there free Wi-Fi?",
+      "answer": "Yes! Free Wi-Fi is available throughout the stadium. Connect to 'FIFA-WC2026-FreeWiFi' — no password required. Note that speeds may vary during peak moments."
+    },
+    {
+      "question": "Where can I buy food and drinks?",
+      "answer": "Food and drink vendors are located along every concourse level. Halal, kosher, vegetarian, and vegan options are available at dedicated stands near Gates C and F. Look for the dietary flag markers."
+    },
+    {
+      "question": "Where is the lost and found?",
+      "answer": "Lost and Found is at the Main Information Desk near Gate A. During the match, you can report lost items to any staff member. After the match, contact the stadium office or visit the FIFA World Cup app."
+    },
+    {
+      "question": "Can I re-enter the stadium if I leave?",
+      "answer": "No, re-entry is not permitted once you exit the stadium. Please ensure you have everything you need before entering."
+    },
+    {
+      "question": "Where can I charge my phone?",
+      "answer": "Free charging stations are available near Gate A (Main Concourse), Gate E (South Concourse), and at the Fan Festival Plaza. Bring your own cable — USB-A and USB-C ports are available."
+    },
+    {
+      "question": "Is smoking allowed?",
+      "answer": "MetLife Stadium is a smoke-free venue. Smoking (including e-cigarettes and vaping) is not permitted anywhere inside the stadium or on the concourse. Designated smoking areas are outside Gate H."
+    },
+    {
+      "question": "What happens if it rains?",
+      "answer": "MetLife Stadium is an open-air venue. We recommend bringing a rain poncho (available for purchase at merchandise stands). Umbrellas are NOT allowed as they block views. The concourse areas are covered and provide shelter."
+    },
+    {
+      "question": "How do I get to my seat from the gate?",
+      "answer": "Check your ticket for your Section number. Information screens at every gate show directions. Staff members (in yellow vests) are stationed throughout to help guide you. The FanPulse AI concierge can also give you step-by-step directions — just tell me your section number!"
+    },
+    {
+      "question": "Are there ATMs in the stadium?",
+      "answer": "ATMs are located near Gates A, C, E, and G on the concourse level. Most vendors also accept contactless payments and mobile wallets."
+    },
+    {
+      "question": "Where is the nearest restroom to Section 114?",
+      "answer": "The nearest restrooms to Section 114 are on the West Stand concourse, between Gates G and H. Accessible restrooms are also available at the Gate G elevator bank."
+    },
+    {
+      "question": "Can I bring water into the stadium?",
+      "answer": "You may bring one sealed, factory-sealed plastic water bottle (500ml or less) per person. Empty reusable bottles are also welcome — use our free refill stations located at every gate concourse."
+    },
+    {
+      "question": "Where can I buy merchandise?",
+      "answer": "Official FIFA merchandise shops are at Gate A (Main Concourse), Gate E (South Concourse), and the Fan Festival Plaza. Team-specific merchandise is available at the Fan Festival Plaza."
+    },
+    {
+      "question": "Is there a place for kids to play?",
+      "answer": "Yes! The Family Zone near Gate F has activities for children including face painting, mini football games, and a play area. It's a quieter area designed for families."
+    }
+  ]
+}

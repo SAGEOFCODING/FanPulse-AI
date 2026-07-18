@@ -1,0 +1,97 @@
+{
+  "shuttle_routes": [
+    {
+      "id": "shuttle-1",
+      "name": "Stadium Express — Times Square",
+      "route": "Times Square → Penn Station → MetLife Stadium",
+      "frequency_minutes": 15,
+      "first_departure": "14:00",
+      "last_departure": "23:30",
+      "travel_time_minutes": 45,
+      "pickup_gate": "A",
+      "dropoff_gate": "A",
+      "accessible": true,
+      "notes": "Wheelchair-accessible buses available on every third departure"
+    },
+    {
+      "id": "shuttle-2",
+      "name": "Stadium Express — Newark",
+      "route": "Newark Penn Station → MetLife Stadium",
+      "frequency_minutes": 20,
+      "first_departure": "14:30",
+      "last_departure": "23:00",
+      "travel_time_minutes": 30,
+      "pickup_gate": "E",
+      "dropoff_gate": "E",
+      "accessible": true,
+      "notes": "All buses are wheelchair accessible"
+    },
+    {
+      "id": "shuttle-3",
+      "name": "Parking Lot Shuttle",
+      "route": "Lot K → Lot J → Lot G → Stadium Gates",
+      "frequency_minutes": 5,
+      "first_departure": "13:00",
+      "last_departure": "00:30",
+      "travel_time_minutes": 10,
+      "pickup_gate": "F",
+      "dropoff_gate": "F",
+      "accessible": true,
+      "notes": "Continuous loop service"
+    }
+  ],
+  "metro": [
+    {
+      "id": "njt-meadowlands",
+      "name": "NJ Transit Meadowlands Line",
+      "station": "Meadowlands Station (adjacent to stadium)",
+      "nearest_gate": "B",
+      "walk_time_minutes": 5,
+      "service_hours": "13:00 — 01:00 (match days)",
+      "frequency_minutes": 10,
+      "accessible": true,
+      "notes": "Direct rail service from Secaucus Junction. Connects to NJ Transit and Amtrak."
+    },
+    {
+      "id": "bus-160",
+      "name": "NJ Transit Bus 160",
+      "station": "Bus stop at Gate G",
+      "nearest_gate": "G",
+      "walk_time_minutes": 2,
+      "service_hours": "06:00 — 00:00",
+      "frequency_minutes": 15,
+      "accessible": true,
+      "notes": "Regular bus service to/from Port Authority Bus Terminal, Manhattan"
+    }
+  ],
+  "rideshare": {
+    "pickup_zone": "Lot P — Rideshare Pickup",
+    "nearest_gate": "D",
+    "walk_time_minutes": 8,
+    "notes": "Designated Uber/Lyft pickup area. Follow blue signs from Gate D."
+  },
+  "parking": [
+    {
+      "lot": "Lot A",
+      "type": "General",
+      "nearest_gate": "A",
+      "walk_time_minutes": 10,
+      "accessible_spaces": true
+    },
+    {
+      "lot": "Lot G",
+      "type": "General",
+      "nearest_gate": "G",
+      "walk_time_minutes": 7,
+      "accessible_spaces": true
+    },
+    {
+      "lot": "Lot K",
+      "type": "Accessible Priority",
+      "nearest_gate": "E",
+      "walk_time_minutes": 5,
+      "accessible_spaces": true,
+      "notes": "Reserved for accessible parking permit holders"
+    }
+  ]
+}

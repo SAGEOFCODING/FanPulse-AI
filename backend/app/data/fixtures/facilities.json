@@ -1,0 +1,126 @@
+{
+  "accessibility": {
+    "wheelchair_routes": [
+      {
+        "id": "wr-1",
+        "name": "North Accessible Route",
+        "from": "Gate A",
+        "to": "Sections 101–105",
+        "description": "Level pathway from Gate A through Main Concourse to North Stand lower sections. No stairs. Elevator access to Upper North at Concourse Point N1.",
+        "surface": "Smooth concrete, fully paved",
+        "width_meters": 2.5
+      },
+      {
+        "id": "wr-2",
+        "name": "East Accessible Route",
+        "from": "Gate C",
+        "to": "Sections 106–110",
+        "description": "Ramped access from Gate C to East Stand. Gentle incline (1:20 gradient). Handrails on both sides.",
+        "surface": "Smooth concrete with tactile strips",
+        "width_meters": 2.0
+      },
+      {
+        "id": "wr-3",
+        "name": "South Accessible Route",
+        "from": "Gate E",
+        "to": "Sections 201–205",
+        "description": "Level entry from Gate E directly into South Stand concourse. Closest to accessible parking Lot K.",
+        "surface": "Smooth concrete, fully paved",
+        "width_meters": 2.5
+      },
+      {
+        "id": "wr-4",
+        "name": "West Accessible Route",
+        "from": "Gate G",
+        "to": "Sections 111–115",
+        "description": "Level pathway from Gate G. Elevator bank at Concourse Point W1 for upper level access.",
+        "surface": "Smooth concrete, fully paved",
+        "width_meters": 2.0
+      }
+    ],
+    "accessible_seating": [
+      { "section": "103", "type": "Wheelchair platform", "companion_seats": 2, "level": "Lower" },
+      { "section": "108", "type": "Wheelchair platform", "companion_seats": 2, "level": "Lower" },
+      { "section": "203", "type": "Wheelchair platform", "companion_seats": 2, "level": "Lower" },
+      { "section": "113", "type": "Wheelchair platform", "companion_seats": 2, "level": "Lower" },
+      { "section": "303", "type": "Wheelchair platform + elevator access", "companion_seats": 2, "level": "Upper" },
+      { "section": "403", "type": "Wheelchair platform + elevator access", "companion_seats": 2, "level": "Upper" }
+    ],
+    "elevators": [
+      { "id": "elev-N1", "location": "Concourse Point N1 (near Gate A)", "serves": "Lower to Upper North" },
+      { "id": "elev-S1", "location": "Concourse Point S1 (near Gate E)", "serves": "Lower to Upper South" },
+      { "id": "elev-E1", "location": "Concourse Point E1 (near Gate C)", "serves": "Lower to Upper East" },
+      { "id": "elev-W1", "location": "Concourse Point W1 (near Gate G)", "serves": "Lower to Upper West" }
+    ],
+    "quiet_rooms": [
+      {
+        "id": "qr-1",
+        "name": "Sensory Room — North",
+        "location": "Near Gate B, Main Concourse Level",
+        "description": "Low-stimulation space for fans with sensory sensitivities. Dim lighting, noise-dampening walls, comfortable seating.",
+        "capacity": 15
+      },
+      {
+        "id": "qr-2",
+        "name": "Sensory Room — South",
+        "location": "Near Gate F, Ground Level",
+        "description": "Quiet space with live match feed on a small screen. Noise-canceling headphones available.",
+        "capacity": 12
+      }
+    ],
+    "prayer_rooms": [
+      {
+        "id": "pr-1",
+        "name": "Multi-Faith Room — East",
+        "location": "Gate C corridor, Room E-201",
+        "description": "Multi-faith prayer and meditation room. Prayer mats and ablution facilities available. Open throughout match day.",
+        "capacity": 30
+      },
+      {
+        "id": "pr-2",
+        "name": "Multi-Faith Room — West",
+        "location": "Gate H corridor, Room W-105",
+        "description": "Quiet prayer space with compass direction markers. Open throughout match day.",
+        "capacity": 20
+      }
+    ]
+  },
+  "sustainability": {
+    "water_refill_stations": [
+      { "id": "wrs-1", "location": "Gate A Concourse", "nearest_gate": "A", "type": "Filtered water fountain + bottle refill" },
+      { "id": "wrs-2", "location": "Gate C Concourse", "nearest_gate": "C", "type": "Filtered water fountain + bottle refill" },
+      { "id": "wrs-3", "location": "Gate E Concourse", "nearest_gate": "E", "type": "Filtered water fountain + bottle refill" },
+      { "id": "wrs-4", "location": "Gate G Concourse", "nearest_gate": "G", "type": "Filtered water fountain + bottle refill" },
+      { "id": "wrs-5", "location": "Fan Festival Plaza", "nearest_gate": "D", "type": "Large multi-tap refill station" },
+      { "id": "wrs-6", "location": "Family Zone", "nearest_gate": "F", "type": "Filtered water fountain (child-height available)" }
+    ],
+    "recycling_points": [
+      { "id": "rp-1", "location": "Every gate entrance", "type": "General recycling (plastic, paper, cans)", "notes": "Color-coded bins at every gate" },
+      { "id": "rp-2", "location": "Main Concourse (every 50m)", "type": "General recycling + food composting", "notes": "Green bins for compostable food waste" },
+      { "id": "rp-3", "location": "Fan Festival Plaza", "type": "Full sorting station (plastic, glass, paper, compost)", "notes": "Staffed recycling station with volunteers to help sort" }
+    ],
+    "sustainability_initiatives": [
+      "All food containers are compostable or recyclable",
+      "Reusable cup program — deposit and return for $2 refund",
+      "Solar panels on stadium roof power 30% of match-day electricity",
+      "Carbon offset program — fans can contribute at info desks",
+      "Free filtered water refills to reduce single-use plastic"
+    ]
+  },
+  "first_aid": [
+    { "id": "fa-1", "location": "Gate A — North First Aid Station", "nearest_gate": "A", "staffed": true },
+    { "id": "fa-2", "location": "Gate E — South First Aid Station", "nearest_gate": "E", "staffed": true },
+    { "id": "fa-3", "location": "Fan Festival Plaza Medical Tent", "nearest_gate": "D", "staffed": true },
+    { "id": "fa-4", "location": "VIP Medical Room", "nearest_gate": "G", "staffed": true }
+  ],
+  "restrooms": [
+    { "location": "Every gate concourse", "accessible": true, "family": false },
+    { "location": "Family Zone (Gate F)", "accessible": true, "family": true },
+    { "location": "Upper Level — at each elevator bank", "accessible": true, "family": false }
+  ],
+  "information_desks": [
+    { "location": "Gate A — Main Information Desk", "nearest_gate": "A", "languages": ["English", "Spanish", "French"] },
+    { "location": "Gate E — South Information Desk", "nearest_gate": "E", "languages": ["English", "Portuguese", "Arabic"] },
+    { "location": "Fan Festival Plaza", "nearest_gate": "D", "languages": ["English", "Spanish", "French", "Portuguese"] }
+  ]
+}

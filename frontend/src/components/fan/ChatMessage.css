@@ -1,0 +1,129 @@
+/* ChatMessage.css */
+
+.chat-message {
+  display: flex;
+  gap: var(--space-3);
+  max-width: 85%;
+}
+
+.chat-message-user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.chat-message-assistant {
+  align-self: flex-start;
+}
+
+.chat-message-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.chat-message-user .chat-message-avatar {
+  background: var(--color-primary-700);
+}
+
+.chat-message-assistant .chat-message-avatar {
+  background: linear-gradient(135deg, var(--color-primary-400), var(--color-accent-500));
+}
+
+.chat-message-content {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  line-height: 1.6;
+}
+
+.chat-message-user .chat-message-content {
+  background: var(--color-primary-600);
+  color: white;
+  border-bottom-right-radius: var(--space-1);
+}
+
+.chat-message-assistant .chat-message-content {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-bottom-left-radius: var(--space-1);
+}
+
+.chat-message-role {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+  opacity: 0.7;
+}
+
+.chat-message-text {
+  font-size: var(--font-size-md);
+  word-break: break-word;
+}
+
+.chat-message-text h3,
+.chat-message-text h4 {
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-2);
+  font-family: var(--font-display);
+}
+
+.chat-message-text li {
+  margin-left: var(--space-4);
+  margin-bottom: var(--space-1);
+}
+
+.chat-message-text strong {
+  color: var(--color-accent-400);
+}
+
+/* Streaming Indicator */
+.chat-streaming-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: var(--space-2);
+  vertical-align: middle;
+}
+
+.chat-streaming-indicator .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary-300);
+  animation: dotBounce 1.4s ease-in-out infinite;
+}
+
+.chat-streaming-indicator .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.chat-streaming-indicator .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dotBounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .chat-message {
+    max-width: 95%;
+  }
+}
