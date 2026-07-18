@@ -15,7 +15,7 @@ class Settings(BaseSettings):
 
     # Gemini AI
     gemini_api_key: str = "not-set"
-    gemini_model: str = "gemini-3.5-flash"
+    gemini_model: str = "gemini-1.5-flash"
 
     # Server
     backend_host: str = "0.0.0.0"
