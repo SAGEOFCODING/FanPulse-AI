@@ -99,9 +99,9 @@ async def fan_chat_stream(request: Request, body: ChatRequest) -> StreamingRespo
                     text = chunk.text.replace("\n", "\\n")
                     yield f"data: {text}\n\n"
             yield "data: [DONE]\n\n"
-        except Exception:
+        except Exception as e:
             logger.exception("Error during Gemini streaming")
-            yield "data: I encountered an issue. Please try again.\n\n"
+            yield f"data: I encountered an issue. Details: {str(e)}\n\n"
             yield "data: [DONE]\n\n"
 
     return StreamingResponse(

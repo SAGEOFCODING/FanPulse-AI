@@ -89,11 +89,11 @@ async def generate_text(
 
         return response.text
 
-    except Exception:
+    except Exception as e:
         logger.exception("Gemini API call failed")
         return (
-            "I'm experiencing a temporary issue connecting to the AI service. "
-            "Please try again in a moment."
+            f"I'm experiencing a temporary issue connecting to the AI service. "
+            f"Details: {str(e)}"
         )
 
 
